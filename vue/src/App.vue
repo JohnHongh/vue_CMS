@@ -6,8 +6,14 @@
 </template>
 
 <script>
+import {a} from '@/api/index'
 export default {
-  name: 'App'
+  name: 'App',
+  mounted() {
+    a().then((res)=>{
+      console.log(res)
+    })
+  },
 }
 </script>
 
