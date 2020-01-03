@@ -1,8 +1,8 @@
 import axios from 'axios';
-
+import config from './api.config';
 const request = axios.create({
-  baseURL: '',
-  timeout: 5000,
+  baseURL: process.env.NODE_ENV === 'development' ? config.BASE_URL_DEV : config.BASE_URL_PROD,
+  timeout: config.TIME_OUT,
   'Content-Type': 'application/json;charset=UTF-8',
 });
 
