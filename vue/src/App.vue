@@ -6,13 +6,19 @@
 </template>
 
 <script>
-import {a} from '@/api/index'
+import {a,b} from '@/api/index'
 export default {
   name: 'App',
   mounted() {
-    a().then((res)=>{
+    a({a:1}).then((res)=>{
+      console.log(res)
+    });
+     a({a:2}).then((res)=>{
       console.log(res)
     })
+    setTimeout(()=>{
+      b()
+    },2000)
   },
 }
 </script>
