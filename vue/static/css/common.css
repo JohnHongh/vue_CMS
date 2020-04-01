@@ -1,0 +1,9 @@
+.el-upload--text {
+    border: none !important;
+    width: 56px !important;
+    height: 32px !important;
+}
+
+.form-info-show span {
+    color: #909399;
+}
